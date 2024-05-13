@@ -15,8 +15,8 @@ import jakarta.persistence.Table;
 public class Game {
 	@Id
 	@GeneratedValue(
-			strategy = GenerationType.SEQUENCE,
-			generator = "TBL_GAMES_SEQ")
+			strategy = GenerationType.SEQUENCE, //geração de valores automáticos
+			generator = "TBL_GAMES_SEQ" ) //nome da sequecia
 	@SequenceGenerator(
 			name = "TBL_GAMES_SEQ",
 			sequenceName = "TBL_GAMES_SEQ",

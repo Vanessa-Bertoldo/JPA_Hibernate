@@ -14,6 +14,10 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL" />
 			<property name="javax.persistence.jdbc.user" value="RM552402" />
 			<property name="javax.persistence.jdbc.password" value="010503" />
+			
+			<property name="hibernate.show_sql" value="true"/>
+			<!-- Delega ao hibernte a tarefa de criar as tabelas automaticamente de acordo com o mapeamento das classes  -->
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
 
 		</properties>
 	</persistence-unit>

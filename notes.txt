@@ -1,0 +1,3 @@
+PADRÃO DAO
+Foi pensado de forma a separar as regras de negócios das regras de acesso ao banco de dados
+Com isso, as classesa DAO são responsáveis por persistir um objeto no banco de dados
