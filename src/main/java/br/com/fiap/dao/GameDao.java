@@ -22,4 +22,8 @@ public class GameDao {
 		Game gameExcluir = em.find(Game.class, game.getId());
 		em.remove(gameExcluir);
 	}
+	
+	public Game buscarGamePeloId(Long Id) {
+		return em.find(Game.class, Id);
+	}
 }

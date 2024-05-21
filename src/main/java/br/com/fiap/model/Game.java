@@ -90,4 +90,18 @@ public class Game {
 		this.categoria = categoria;
 	}
 	
+	@Override
+	public String toString() {
+		return "\nGame ["
+				+ "\nid=" + id + ", "
+				+ "\ntitulo=" + titulo + ", "
+				+ "\ndataLancamento=" + dataLancamento + ", "
+				+ "\nvalor=" + valor + ", "
+				+ "\nprodutora=" + produtora + ", "
+				+ "\nfinalizado=" + finalizado + ", "
+				+ "\ncategoria=" + categoria + "]";
+	}
+	
+	
+	
 }
