@@ -34,6 +34,12 @@ public class Main {
 		gameDao.atualizar(game1);
 		em.getTransaction().commit();
 		em.close();
+		
+		//Metodo de excluir
+		em.getTransaction().begin();
+		gameDao.remover(game1);
+		em.getTransaction().commit();
+		em.close();
 	}
 
 }
