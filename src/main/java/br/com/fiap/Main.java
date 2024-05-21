@@ -28,6 +28,12 @@ public class Main {
 		gameDao.salvar(game1); //execução do método de persistência
 		em.getTransaction().commit(); //efetiva a transação
 		em.close(); //libera recursos não necessarios
+		
+		//Metodo atualizar
+		em.getTransaction().begin();
+		gameDao.atualizar(game1);
+		em.getTransaction().commit();
+		em.close();
 	}
 
 }
