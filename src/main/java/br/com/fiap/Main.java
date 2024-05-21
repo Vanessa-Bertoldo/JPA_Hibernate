@@ -1,6 +1,7 @@
 package br.com.fiap;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import br.com.fiap.dao.GameDao;
 import br.com.fiap.model.Game;
@@ -13,7 +14,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		EntityManager em = Conexao.getEntityManager();
-		pesquisar(em);
+		//pesquisar(em);
+		listarTodosOsGames(em);
+		
 		/*
 		//Metodo atualizar
 		em.getTransaction().begin();
@@ -65,6 +68,16 @@ public class Main {
 		gameDao.salvar(game1); //execução do método de persistência
 		em.getTransaction().commit(); //efetiva a transação
 		em.close(); //libera recursos não necessarios
+	}
+	
+	public static void listarTodosOsGames(EntityManager em) {
+		GameDao gameDao = new GameDao(em);
+		List<Game> games = gameDao.listarTodosOsGames();
+		
+		for(Game game : games) {
+			System.out.println(game);
+			System.out.println("--------------");
+		}
 	}
 	
 }
